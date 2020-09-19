@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SpringApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6OE-rS-1PE" customClass="SpringView" customModule="Spring">
+                                <rect key="frame" x="40" y="60" width="240" height="120"/>
+                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="M57-zk-DSY"/>
+                                    <constraint firstAttribute="width" constant="240" id="Nw5-hb-JdQ"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dWD-HS-i28" customClass="SpringButton" customModule="Spring">
+                                <rect key="frame" x="40" y="407" width="240" height="30"/>
+                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="run animation">
+                                    <color key="titleColor" red="0.98467332124710083" green="0.98058801889419556" blue="0.95861536264419556" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="runSpringAnimation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3BK-aQ-FUL"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yq3-8X-0hO" customClass="SpringLabel" customModule="Spring">
+                                <rect key="frame" x="40" y="60" width="240" height="120"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.98467332124710083" green="0.98058801889419556" blue="0.95861536264419556" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dWD-HS-i28" secondAttribute="bottom" multiplier="1.3" id="5CK-1I-Tll"/>
+                            <constraint firstItem="dWD-HS-i28" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5O2-sr-ZI4"/>
+                            <constraint firstItem="6OE-rS-1PE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="7Mu-hV-Z2C"/>
+                            <constraint firstItem="yq3-8X-0hO" firstAttribute="centerX" secondItem="6OE-rS-1PE" secondAttribute="centerX" id="AnP-KP-h2E"/>
+                            <constraint firstItem="yq3-8X-0hO" firstAttribute="centerY" secondItem="6OE-rS-1PE" secondAttribute="centerY" id="EWG-DB-uSp"/>
+                            <constraint firstItem="yq3-8X-0hO" firstAttribute="width" secondItem="6OE-rS-1PE" secondAttribute="width" id="Zex-gU-dI6"/>
+                            <constraint firstItem="6OE-rS-1PE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ghh-Ny-Sf1"/>
+                            <constraint firstItem="yq3-8X-0hO" firstAttribute="height" secondItem="6OE-rS-1PE" secondAttribute="height" id="iqm-bo-3Bb"/>
+                            <constraint firstItem="dWD-HS-i28" firstAttribute="width" secondItem="6OE-rS-1PE" secondAttribute="width" id="p1C-be-7LK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="animationDescriptionLabel" destination="yq3-8X-0hO" id="zkK-Qp-kJP"/>
+                        <outlet property="springButton" destination="dWD-HS-i28" id="AkP-lf-WZg"/>
+                        <outlet property="springView" destination="6OE-rS-1PE" id="pjg-6I-XDl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.875" y="114.08450704225352"/>
+        </scene>
+    </scenes>
+</document>
